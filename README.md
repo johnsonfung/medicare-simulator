@@ -1,8 +1,23 @@
+# medicare-simulator
+
+The live version of this is currently hosted at https://getresponsible.io - this project is an open-source tool meant to help folks understand how various Medicare insurance plans cover medical situations. It is unaffiliated with any company or organization.
+
+## Configuration
+
+Most configurations can be found in `src/content.js` which includes assumptions and constants for medical situations, premiums, and deductibles.
+
+Most calculation logic can be found in `calculateHospitalCosts()` in `src/functions.js`. 
+
+
+
+## Install and Running
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
 In the project directory, you can run:
+
+### `yarn`
+
+Installs all dependecies.<br/>
 
 ### `yarn start`
 
