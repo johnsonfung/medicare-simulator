@@ -1,0 +1,1034 @@
+/*
+Template Name: Hyper - Responsive Bootstrap 4 Admin Dashboard
+Version: 1.6.0
+Author: CoderThemes
+Email: support@coderthemes.com
+File: Main Css File
+*/
+
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "config/default/variables";
+@import "config/default/custom-variables";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+// Structure
+@import "custom/structure/general";
+@import "custom/structure/left-menu";
+@import "custom/structure/topbar";
+@import "custom/structure/right-sidebar";
+@import "custom/structure/page-head";
+@import "custom/structure/footer";
+// horizontal nav
+@import "custom/structure/horizontal-nav";
+
+//Fonts
+//@import "custom/fonts/nunito";
+
+//Components
+@import "custom/components/mixins";
+@import "custom/components/accordions";
+@import "custom/components/avatar";
+@import "custom/components/breadcrumb";
+@import "custom/components/buttons";
+@import "custom/components/badge";
+@import "custom/components/card";
+@import "custom/components/dropdown";
+@import "custom/components/forms";
+@import "custom/components/modal";
+@import "custom/components/nav";
+@import "custom/components/pagination";
+@import "custom/components/popover";
+@import "custom/components/print";
+@import "custom/components/progress";
+@import "custom/components/reboot";
+@import "custom/components/switch";
+@import "custom/components/tables";
+@import "custom/components/type";
+@import "custom/components/utilities";
+@import "custom/components/widgets";
+@import "custom/components/social";
+@import "custom/components/steps";
+@import "custom/components/preloader";
+
+//Pages
+@import "custom/pages/authentication";
+@import "custom/pages/buttons-demo";
+@import "custom/pages/error";
+@import "custom/pages/faq";
+@import "custom/pages/grid-demo";
+@import "custom/pages/icons-demo";
+@import "custom/pages/maintenance";
+@import "custom/pages/tasks";
+@import "custom/pages/email";
+
+// Vendors
+//@import "./node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min";
+
+// Plugins
+/*
+@import "custom/plugins/apexcharts";
+@import "custom/plugins/britechart";
+@import "custom/plugins/calendar";
+@import "custom/plugins/chartjs";
+@import "custom/plugins/datatable";
+@import "custom/plugins/datepicker";
+@import "custom/plugins/draft-wysiwyg";
+@import "custom/plugins/dropzone";
+@import "custom/plugins/maps";
+@import "custom/plugins/metisMenu";
+@import "custom/plugins/react-select";
+@import "custom/plugins/slimscroll";
+@import "custom/plugins/simplemde";
+@import "custom/plugins/typehead";*/
+
+@import "custom/plugins/icons";
+
+body {
+  color: #333;
+}
+
+p {
+  font-family: "chaparral-pro";
+}
+
+span {
+  font-family: "source-sans-pro", sans-serif;
+}
+
+button {
+  font-family: "source-sans-pro", sans-serif;
+}
+
+.headerSpacing {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.understandingCardsText {
+  margin-bottom: 20px;
+}
+
+.emptyStateAddPropertyContainer {
+  width: 100%;
+}
+
+.emptyStateAddPropertyBox {
+  width: 70%;
+  height: 400px;
+  margin: 50px auto 0px auto;
+  border: dashed 3px #eee;
+  border-radius: 5px;
+  padding: 50px 40px 40px 40px;
+}
+
+.emptyStateAddPropertyBox:hover {
+  cursor: pointer;
+  border-color: #5060ee;
+}
+
+.emptyStateAddPropertyBox:hover h1,
+.emptyStateAddPropertyBox:hover h4 {
+  color: #222;
+}
+
+.emptyStateAddPropertyImage {
+  width: 150px;
+}
+
+.card-body h5 {
+  line-height: 1.3em;
+}
+
+.outlineBtn {
+  background: none;
+  border: solid 2px #fff;
+  color: #fff;
+}
+
+.outlineBtn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.form-inline-submit-margin {
+  margin-top: 28px;
+}
+
+.action-icon:hover {
+  cursor: pointer;
+}
+
+.extraPaymentsMoneyInput {
+  font-size: 50px;
+  padding: 50px 15px;
+  font-weight: bold;
+}
+
+.wizard-previous-next-block {
+  border-top: solid 1px #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.nextButtonHelpText {
+  margin-right: 10px;
+}
+
+.analysisChoicesFeatureTitle {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.analysisChoicesFeatureDetails {
+  color: #333;
+  font-size: 16px;
+}
+
+.bestFeature {
+  width: 5px;
+  height: 5px;
+  background-color: #0acf97;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: 3px;
+}
+
+.card-pricing-recommended .card-pricing-plan-tag {
+  background-color: #0acf97;
+  color: #fff;
+}
+
+.card-pricing-recommended {
+  box-shadow: 0px 0px 5px 0px #0acf97;
+}
+
+.simluationIntroImage {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+a.outlineBtn {
+  cursor: pointer;
+}
+
+.dividerBar {
+  border-bottom: solid 1px #ccc;
+  width: 10px;
+  margin: 20px auto;
+}
+
+a.textLink {
+  color: #727cf5 !important;
+}
+
+a.textLink:hover {
+  text-decoration: underline !important;
+  color: #6b5eae !important;
+  cursor: pointer;
+}
+
+tr.invalidPayment {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+a.responsibleTooltip {
+  color: #727cf5 !important;
+}
+
+a.responsibleTooltip:hover {
+  text-decoration: underline !important;
+  color: #6b5eae !important;
+  cursor: pointer;
+}
+
+.popover-body {
+  color: #fff;
+}
+
+h2.refinancingWizard {
+  text-align: center;
+  font-size: 20px;
+}
+
+h4.newMortgageRate {
+  font-size: 30px;
+  border: solid 1px #ccc;
+  padding: 10px;
+  border-radius: 200px;
+  text-align: center;
+  color: #fff;
+  background-color: #727cf5;
+  margin-bottom: 20px;
+}
+
+span.mortgageRatePercent {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.refinancingWizardMortgageTerm {
+  border: dashed 1px #eee;
+  padding: 7px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.refinancingWizardOldRate {
+  font-size: 25px;
+  border: solid 1px #ccc;
+  padding: 10px;
+  border-radius: 200px;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(103, 103, 103);
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.refinancingWizardOldCard {
+  padding-bottom: 20px;
+}
+
+.refinancingWizardPrincipal {
+  margin-top: 20px;
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
+.refinancingWizardPrincipalLeftLabel {
+  font-size: 12px;
+}
+
+.refinancingWizardPrincipalLeft {
+  font-size: 48px;
+}
+
+.vsIcon {
+  padding-top: 50px;
+}
+
+.underlineText {
+  text-decoration: underline;
+}
+
+.row .understandingCards .card {
+  height: 300px;
+  background-color: none;
+  box-shadow: none;
+}
+
+.row .understandingCards .card .understandingCardsTitle {
+  font-size: 30px;
+  //font-weight: normal;
+}
+
+.accentPurple strong {
+  background: -webkit-linear-gradient(45deg, #376bda, #322283);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.accentPurpleBack {
+  background: -webkit-linear-gradient(45deg, #376bda, #322283);
+  color: #fff;
+}
+
+.accentGreen strong {
+  background: -webkit-linear-gradient(45deg, #2ba4b4, #09b282);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.accentGreenBack {
+  background: -webkit-linear-gradient(45deg, #2ba4b4, #09b282);
+  color: #fff;
+}
+
+.accentOrange strong {
+  background: -webkit-linear-gradient(45deg, #af5500, #ec8600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.accentOrangeBack {
+  background: -webkit-linear-gradient(45deg, #af5500, #ec8600);
+  color: #fff;
+}
+
+.accentRed strong {
+  background: -webkit-linear-gradient(45deg, #970321, #fa5c7c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.accentRedBack {
+  background: -webkit-linear-gradient(45deg, #970321, #fa5c7c);
+  color: #fff;
+}
+
+.accentBlue strong {
+  background: -webkit-linear-gradient(45deg, #3175ce, #16cdff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.accentBlueBack {
+  background: -webkit-linear-gradient(45deg, #3175ce, #16cdff);
+  color: #fff;
+  display: inline-block;
+}
+
+.factCardFilters {
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.filterLabel {
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.factCardFilters button {
+  margin-right: 10px;
+}
+
+.factCard {
+  margin-bottom: 30px;
+}
+
+.factCard .card-body {
+  padding: 0;
+}
+
+.factCard .flipback {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  opacity: 0.6;
+}
+
+.factCard .flipback:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.factCardFront,
+.factCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.factCardFront {
+  background-color: rgb(244, 244, 244);
+  border: solid 1px rgb(180, 180, 180);
+}
+
+.factCardFront:hover {
+  cursor: pointer;
+  border-width: 2px;
+  background-color: rgb(250, 250, 250);
+}
+
+.factCardBack {
+  background-color: rgb(138, 138, 138);
+  border: solid 1px rgb(180, 180, 180);
+}
+
+.factCard .questionRepeat {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.factCard .answerMain {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.factCard .answerSecondary {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.factCard .answerDetails {
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.impactCards {
+  height: 230px;
+}
+
+.sellChoiceCard {
+  height: 150px;
+  padding-top: 20px;
+}
+
+.sellChoiceCard:hover {
+  cursor: pointer;
+  border: solid 1px #ccc;
+}
+
+.sellChoiceSelected {
+  background-color: #727cf5;
+  color: #fff;
+}
+
+h4.sellSimLabel {
+  font-size: 22px;
+  text-align: right;
+  padding: 15px 10px;
+}
+
+.sellSimHelpText {
+  margin-top: -25px;
+  text-align: right;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+h3.sellSimLabel {
+  font-size: 30px;
+  text-align: right;
+  padding: 15px 10px;
+}
+
+strong.success,
+h4.success,
+h3.success,
+h2.success,
+h1.success {
+  color: #0acf97;
+}
+
+.success {
+  color: #0acf97;
+}
+
+.danger {
+  color: #fa5c7c;
+}
+
+h3.danger,
+strong.danger {
+  color: #fa5c7c;
+}
+
+.cashLeftOver {
+  border: solid 1px #ccc;
+  padding: 15px 40px;
+  margin-bottom: 15px;
+}
+
+span.perMonth {
+  font-size: 12px;
+}
+
+span.smallh2 {
+  font-size: 14px;
+  color: #000;
+}
+
+.borderTop {
+  border-top: solid 1px #ccc;
+  padding-top: 20px;
+}
+
+a .card h4,
+a .card p,
+a .card span,
+a .card h5 {
+  color: #000;
+}
+
+a:hover .card {
+  border: solid 1px #333;
+}
+
+.backToPropertyListings {
+  color: #333;
+  padding: 20px 0px;
+}
+
+.backToPropertyListings:hover {
+  color: #777;
+}
+
+.savingIcon {
+  margin-top: 26px;
+  width: 125px;
+  float: right;
+}
+
+.savingIcon .savingText {
+  color: #ccc;
+  font-style: italic;
+}
+
+.savingIcon .savingTextProgress {
+  float: left;
+  color: #ffbc00;
+}
+
+.savingIcon .savingTextProgress:after,
+.savingIcon .connectingText:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+.savingIcon .connectingText {
+  float: left;
+  color: #fa5c7c;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+.statusLightGreen {
+  height: 5px;
+  width: 5px;
+  background-color: #0acf97;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  margin-top: 7px;
+}
+
+.statusLightRed {
+  height: 5px;
+  width: 5px;
+  background-color: #fa5c7c;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  margin-top: 7px;
+}
+
+.form-control-slider-toggle {
+  display: inline-block;
+  float: none;
+  border: none;
+  color: #333;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.customFormTitle {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.numberDisplaySwitcher {
+  padding: 5px 0px;
+}
+
+.numberDisplaySwitcher div:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+.numberDisplaySwitcher div:hover .clickToEditText {
+  display: inline-block;
+}
+
+.clickToEditText {
+  font-size: 10px;
+  display: none;
+}
+
+.numberDisplaySwitcher,
+.numberDisplaySwitcher input {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.numberDisplaySwitcher input:focus {
+  outline: none;
+  color: #555;
+  caret-color: #727cf5;
+  width: 80%;
+}
+
+.formsChoiceBox:hover {
+  border: solid 3px #ccc;
+  cursor: pointer;
+}
+
+.formsChoicesBoxWrapper {
+  text-align: center;
+}
+.formsChoiceBox {
+  border: solid 3px rgba(0, 0, 0, 0);
+}
+.selectedChoiceBox {
+  border: solid 3px #727cf5;
+}
+
+.formsChoiceBoxImage {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.formsChoicesBoxWrapper .card {
+  margin-bottom: 0px;
+}
+
+.propertyModal {
+  padding: 0px 25px;
+}
+
+#propertyName {
+  font-size: 25px;
+}
+
+.propertyModal input {
+  padding: 25px 15px;
+}
+
+// MEDICARE
+
+.planOptionCardImage {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.planOptionCardWrapper {
+  width: 100%;
+  float: left;
+}
+
+.planOptionCard:hover,
+.planOptionCardSelected:hover {
+  border: solid 1px #ccc;
+  cursor: pointer;
+}
+
+.planOptionCard {
+  opacity: 0.5;
+  border: solid 1px #fff;
+}
+
+.planOptionCardText {
+  text-align: left;
+}
+
+.planOptionCardTitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.planOptionCardSubtitle {
+  font-size: 16px;
+}
+
+.planOptionCardSelected {
+  opacity: 1;
+  border: solid 1px #fff;
+
+  //border: solid 1px black;
+}
+
+.planOptionCardCheck {
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.warningTextMedicare {
+  color: #fa5c7c;
+  padding: 20px;
+  border: solid 1px #fa5c7c;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.medigapBtn {
+  margin-right: 5px;
+}
+
+.medigapButtonsGroup {
+  margin-top: 10px;
+}
+
+.medigapHelpText {
+  margin-bottom: 10px;
+}
+
+span.good {
+  color: #006f1a;
+}
+
+span.bad {
+  color: #9f0000;
+}
+
+.medicareReport {
+  text-align: left;
+  padding: 10px;
+}
+
+.medicareReportBlock {
+  padding: 0px 20px;
+  margin-bottom: 0px;
+}
+
+.medicareReportHeader {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.medicareReportMainItem {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.medicareReportSubtext {
+  font-size: 12px;
+}
+
+.medicareReportBlock ul {
+  padding-inline-start: 20px;
+}
+
+.medicareReportBlock ul li {
+  font-size: 12px;
+}
+
+.downArrow {
+  width: 20px;
+  margin-bottom: 10px;
+}
+
+.medicareH1 {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.medicareH1 .subtitle {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.premiumBox {
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.planDetailsLink {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.planDetailsLink a {
+  color: #333;
+}
+
+.logoArea {
+  position: fixed;
+  left: 0;
+  width: 500px;
+}
+
+.topRightHeader {
+  position: fixed;
+  background-color: #000;
+  right: 0;
+  width: 400px;
+}
+
+.headerBar {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 80px;
+}
+
+.appBody {
+  margin-top: 120px;
+}
+
+.outOfPocketBlock {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+.outOfPocketBlock .medicareReportMainItem {
+  font-size: 36px;
+}
+
+.card-header h5 {
+  font-size: 24px;
+}
+
+.appBody .formsChoiceBoxText {
+  font-size: 16px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.accordianHeader:hover {
+  border: solid 1px #333;
+}
+
+.accordianHeader:hover {
+  border: solid 1px rgba(0, 0, 0, 0);
+}
+
+.mobileFooter {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: #000;
+  z-index: 999;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .accordianHeader h5 {
+    font-size: 20px;
+  }
+
+  .logoArea {
+    top: 0;
+    left: 10px;
+    width: 100%;
+  }
+
+  .topRightHeader {
+    top: 60px;
+    width: 100%;
+  }
+
+  .appBody {
+    padding-bottom: 30px;
+  }
+
+  .mobileFooter {
+    display: block;
+  }
+
+  .col {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .situationsCol {
+    .col,
+    .tab-content,
+    .card,
+    .card-body {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  .appBody {
+    margin-top: 170px;
+  }
+  .headerBar {
+    padding-bottom: 10px;
+  }
+
+  .headerBar h1 {
+    border-bottom: solid 1px #333;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+  }
+  .medicareH1 {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  .topRightHeader {
+    float: left;
+    margin-top: 0px;
+  }
+
+  .medicareReportBlock .row .border-right {
+    border-right: none !important;
+  }
+  .mobileCost {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+  }
+  .mobileDetails {
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
+
+.disclaimerText {
+  font-size: 12px;
+  font-style: oblique;
+  color: #333;
+}
+
+.disclaimerTextWhite {
+  font-size: 12px;
+  font-style: oblique;
+  color: #ccc;
+}
